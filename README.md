@@ -4,17 +4,16 @@ undefined
 ## Ussage
 
 ```js
-listen('Ctrl+↑', () => {
-    alert('Ctrl+↑ pressed');
+listen('a+b+c', () => {
+    alert('a+b+c pressed');
 }, {target: testEl});
 ```
 
 ```html
-<testarea id=testEl style="position:absolute">write "abc" while holding the keys</textarea>
+<textarea id=testEl>write "abc" while holding the keys</textarea>
 ```
 
 [doc](https://doc.deno.land/https://cdn.jsdelivr.net/gh/u1ui/shortcut.js@x/shortcut.js)
-
 
 ## Install
 
