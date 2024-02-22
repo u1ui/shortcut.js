@@ -20,9 +20,7 @@
     <script type=module style="display:block">
 import {listen} from "../shortcut.js";
 
-listen('a+s', () => {
-    trigger('test-as-textarea');
-}, {target: document.querySelector('textarea')});
+listen('a+s', () => trigger('test-as-textarea'), {target:testEl});
 
 listen('a+s', () => trigger('test-as'));
 
@@ -35,7 +33,7 @@ listen('ctrl+up', () => trigger('test-ctrl-up'));
 listen('ctrl+shift+up', () => trigger('test-ctrl-shift-up'));
     </script>
 
-    <textarea id=testEl>write "abc" while holding the keys</textarea>
+    <textarea id=testEl>write "as" while holding the keys</textarea>
     
     <ul>
         <li id="test-as-textarea">a+s in textarea</li>

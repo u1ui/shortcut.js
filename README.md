@@ -1,7 +1,7 @@
 # shortcut.js
-undefined
+Easy keyboard shortcuts
 
-## Ussage
+## Usage
 
 ```js
 listen('a+b+c', () => {

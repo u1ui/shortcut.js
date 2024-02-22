@@ -57,3 +57,33 @@ export function listen(combination, callback, options = {}) {
         }
     });
 }
+
+
+
+/*
+maybe later: the order should probably not matter
+function listen(combination, callback, options = {}) {
+    const requiredKeys = new Set(combination.toLowerCase().split('+').map(k => normalizeKey(k)));
+    let activeKeys = new Set();
+
+    document.addEventListener('keydown', function(event) {
+        activeKeys.add(normalizeKey(event.key.toLowerCase()));
+        if (isCombinationPressed(requiredKeys, activeKeys)) {
+            callback();
+        }
+    });
+
+    document.addEventListener('keyup', function(event) {
+        activeKeys.delete(normalizeKey(event.key.toLowerCase()));
+    });
+}
+
+function isCombinationPressed(requiredKeys, activeKeys) {
+    for (let key of requiredKeys) {
+        if (!activeKeys.has(key)) {
+            return false;
+        }
+    }
+    return true;
+}
+*/
